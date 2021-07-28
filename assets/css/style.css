@@ -1,0 +1,101 @@
+/****************************************************************************/
+div {
+    position: fixed;
+    left: 0vw;
+    /* top: 10vh; */
+    padding: 0;
+    width: 100vw;
+}
+img {
+    width: 5vw;
+    transform: translate(0vw, 5px);
+}
+
+/****************************************************************************/
+#track1 {
+    top: 0vh;
+    border-bottom: 5px solid #000;
+}
+/*--------------------------------------------------------------------------*/
+#track2 {
+    top: 10vh;
+    border-bottom: 5px solid #000;
+}
+/*--------------------------------------------------------------------------*/
+#track3 {
+    position: unset;
+    margin: 30vh auto 0;
+    width: 60vmin;
+    height: 60vmin;
+    border: 5px solid #000;
+    border-radius: 30vmin;
+    margin-left: calc(100vw- 30vmin);
+}
+
+/****************************************************************************/
+#train1 {
+    animation-name: moveTrain1;
+    animation-duration: 12s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+/*--------------------------------------------------------------------------*/
+#train2 {
+    animation-name: moveTrain2;
+    animation-duration: 15s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+/*--------------------------------------------------------------------------*/
+#train3 {
+    margin-top: calc(30vmin - 5vw + 10px);
+    margin-left: calc(30vmin - 2.5vw);
+
+    animation-name: moveTrain3;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: rotate(180deg);
+}
+
+/****************************************************************************/
+@keyframes moveTrain1 {
+    0%,
+    100% {
+        transform: translate(0vw, 5px);
+    }
+    40% {
+        transform: translate(calc(100vw - 5vw), 5px);
+    }
+    50% {
+        transform: translate(calc(100vw - 5vw), 5px);
+    }
+    90% {
+        transform: translate(0vw, 5px);
+    }
+}
+/*--------------------------------------------------------------------------*/
+@keyframes moveTrain2 {
+    0%,
+    100% {
+        transform: translate(0vw, 5px);
+    }
+    40% {
+        transform: translate(calc(100vw - 5vw), 5px);
+    }
+    50% {
+        transform: translate(calc(100vw - 5vw), 5px) rotateY(180deg);
+    }
+    90% {
+        transform: translate(0vw, 5px) rotateY(180deg);
+    }
+}
+/*--------------------------------------------------------------------------*/
+@keyframes moveTrain3 {
+    from {
+        transform: rotate(0deg) translateX(30vmin) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(30vmin) rotate(-360deg);
+    }
+}
