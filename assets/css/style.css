@@ -55,7 +55,7 @@ img {
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
 }
 
 /****************************************************************************/
@@ -93,9 +93,9 @@ img {
 /*--------------------------------------------------------------------------*/
 @keyframes moveTrain3 {
     from {
-        transform: rotate(0deg) translateX(30vmin) rotate(0deg);
+        transform: rotate(0deg) translateX(calc(30vmin + 5px)) rotate(0deg);
     }
     to {
-        transform: rotate(360deg) translateX(30vmin) rotate(-360deg);
+        transform: rotate(360deg) translateX(calc(30vmin + 5px)) rotate(-360deg);
     }
 }
