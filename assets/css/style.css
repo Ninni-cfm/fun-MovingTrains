@@ -23,13 +23,16 @@ img {
 }
 /*--------------------------------------------------------------------------*/
 #track3 {
+    --locoWidth: 5vw;
+    --locoHeight: calc(var(--locoWidth) * 556 / 631);
+
     position: unset;
     margin: 30vh auto 0;
     width: 60vmin;
     height: 60vmin;
     border: 5px solid #000;
     border-radius: 30vmin;
-    margin-left: calc(100vw- 30vmin);
+    margin-left: calc(50vw - 30vmin);
 }
 
 /****************************************************************************/
@@ -48,14 +51,14 @@ img {
 }
 /*--------------------------------------------------------------------------*/
 #train3 {
-    margin-top: calc(30vmin - 5vw + 10px);
-    margin-left: calc(30vmin - 2.5vw);
+    position: relative;
+    top: 26vmin;
+    left: calc(26vmin - 5px);
 
     animation-name: moveTrain3;
-    animation-duration: 25s;
+    animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    /* transform: rotate(180deg); */
 }
 
 /****************************************************************************/
@@ -93,9 +96,15 @@ img {
 /*--------------------------------------------------------------------------*/
 @keyframes moveTrain3 {
     from {
-        transform: rotate(0deg) translateX(calc(30vmin + 5px)) rotate(0deg);
+        transform: rotate(-0deg)
+            translateX(calc(30vmin - var(--locoWidth) / 2 + 5px)) rotate(090deg)
+            rotateX(180deg);
     }
     to {
-        transform: rotate(360deg) translateX(calc(30vmin + 5px)) rotate(-360deg);
+        transform: rotate(360deg)
+            translateX(calc(30vmin - var(--locoWidth) / 2 + 5px)) rotate(090deg)
+            rotateX(180deg);
     }
 }
+
+/****************************************************************************/
